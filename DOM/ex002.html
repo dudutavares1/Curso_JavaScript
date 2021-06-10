@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comandos Basicos com JS</title>
+    <title>Comandos DOM</title>
 <style>
     body {
         background-color: rgb(143, 76, 206);
@@ -12,13 +12,7 @@
         font-size: normal 20pt arial;
         text-align: center;
     }
-h1 {
-  
-}
 
-p{
-    font-size: 18px;
-}
 
 #area {
     background: green;
@@ -36,12 +30,7 @@ p{
 
 </head>
 <body>
-
-
 <h1>Eventos DOM</h1>
-
-<p>Prendendo usa <strong>DOM </strong>em JavaScript</p>
-
 
 
 <div id="area">
@@ -54,15 +43,23 @@ p{
 
 
 <script>
+var a = document.getElementById('area')
+a.addEventListener('click', clicar)
+a.addEventListener('mouseenter', entrar)
+a.addEventListener('mouseout', sair)
 
-var corpo = window.document.body
-var p1 = window.document.getElementsByTagName('p')[0]
-var d = document.querySelector ('div#msg')
-d.style.color = 'black'
-
-
-
-
+function clicar() {
+    a.innerText = 'Clicou...'
+    a.style.background = 'red'
+}
+function entrar() {
+    a.innerText = 'Entrou...'
+    a.style.background = 'blue'
+}
+function sair() {
+    a.innerText = ' Saiu....'
+    a.style.background = 'pink'
+}
 
 </script>
 
