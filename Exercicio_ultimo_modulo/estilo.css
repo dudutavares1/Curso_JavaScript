@@ -18,6 +18,13 @@ box-shadow: 5px 5px 10px black;
 
 }
 
+select#flista {
+    width: 150px;
+}
+
+
+
+
 footer {
 color: white;
 font-style: italic;
